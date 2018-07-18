@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <label class="wrap">
+        <input class="check" type="checkbox">
+        <div class="heart"></div>
+    </label>
+</body>
+
+<style>
+    .wrap {
+        position: relative;
+    }
+
+    .check {
+        position: absolute;
+        z-index: 99999;
+        visibility: hidden;
+    }
+
+    .heart {
+        width: 100px;
+        height: 100px;
+        background: url(http://nelog.jp/wp-content/uploads/2016/03/heart_animation.png) no-repeat;
+        background-position: 0 0;
+        cursor: pointer;
+    }
+
+    input:checked~.heart {
+        background-position: -2800px 0;
+        -webkit-transition: background 1s steps(28);
+        transition: background 1s steps(28);
+    }
+</style>
+
+</html>
